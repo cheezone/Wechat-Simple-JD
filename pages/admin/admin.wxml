@@ -1,0 +1,17 @@
+<!--pages/admin/admin.wxml-->
+<button bindtap="chooseImage">选择 banner 图片</button>
+<button bindtap="uploadImage">上传 banner 图片</button>
+<button bindtap="pubImage">发布 banner 图片</button>
+<button bindtap="deleteImage">删除 banner 图片</button>
+<button bindtap="insImage">插入  banner 图片</button>
+<navigator url="/pages/home/home" hover-class="navigator-hover">跳转到新页面</navigator>
+<text>files：</text>
+<image wx:for="{{banners}}" wx:key="index" src="{{item}}"></image>
+<view>
+  <text>fileIDs：</text>
+  <text wx:for="{{fileIDs}}" wx:key="index" >{{item}}</text>
+</view>
+<view>
+  <text>fileList：</text>
+  <text wx:for="{{fileList}}" wx:key="index" >{{item.tempFileURL}}</text>
+</view>

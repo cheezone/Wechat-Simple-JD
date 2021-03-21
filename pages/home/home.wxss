@@ -1,0 +1,92 @@
+/* pages/home/home.wxss */
+.nav {
+  background-color: red;
+  display: flex;
+  line-height: 80rpx;
+  padding: 20rpx 30rpx;
+  margin-bottom: 10rpx;
+  align-items: center;
+}
+
+.nav .home-icon image {
+  width: 34rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+}
+
+.jd-icon image {
+  width: 44rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+}
+
+.nav .search {
+  align-items: center;
+  background-color: white;
+  border-radius: 50rpx;
+  flex: 1;
+  display: flex;
+  margin: 0 20rpx;
+  height: 60rpx;
+  font-size: small;
+}
+
+.nav .search .jd-icon {
+  padding: 0 20rpx;
+}
+
+.nav .search .search-icon {
+  padding-top: 35rpx;
+}
+
+.jd-icon::after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #ddd;
+  height: 16px;
+  top: 42rpx;
+  left: 150rpx;
+}
+
+.nav .login {
+  color: white;
+  font-size: 30rpx;
+}
+
+
+/* .banner-bg::before{
+  content :"";
+  display:block ;
+  width: 100%;
+  height:140rpx
+  background-color: red;
+}
+.banner-bg::after{
+  content :"";
+  display:block ;
+  width: 100%;
+  border-radius: 100%;
+  background-color: red;
+} */
+
+.banner-bg {
+  z-index: -1;
+  background-image: linear-gradient(359deg, #e67f71, red 50%);
+  position: absolute;
+  top: 0;
+  left: -25%;
+  height: 8rem;
+  width: 150%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+swiper {
+  height: 296rpx;
+  margin: 0 20rpx;
+}
+
+.swiper-item image {
+  width: 100%;
+  border-radius: 30rpx;
+}

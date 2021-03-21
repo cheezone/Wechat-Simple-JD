@@ -1,0 +1,12 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml</text>
+<view>123</view>
+<image src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'></image>
+
+<view>{{msg}}</view>
+
+<!-- <view>{{friends[0]}}</view>
+<view>{{friends[1]}}</view>
+<view>{{friends[2]}}</view> -->
+
+<view wx:for="{{friends}}">{{item}}</view>

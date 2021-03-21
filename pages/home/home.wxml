@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+
+<view class="nav" >
+  <view class="home-icon">
+    <image mode="widthFix" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgAgMAAAAdw9KTAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURUdwTP///////////waf0AoAAAADdFJOUwDjSYAlncUAAAAbSURBVBjTY5j/Hwq+MdTDmH+RmUgK6AuGhcsAU5tyB6Ji+x0AAAAASUVORK5CYII="></image>
+  </view>
+  <view class="search">
+    <view class="jd-icon">
+       <image mode="widthFix" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAeCAMAAABpA6zvAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURUdwTOo8Puo7Peo7Pek7Peo7Pe0/Qek7PvE+SP9SUuo7Peo7Peo7Pus8P+o7Peo7Pek7PZSxd20AAAAQdFJOUwBV8eG+hyGkEQbGmWs/rthNA0r+AAAA5klEQVQ4y63T0RaDIAgAUEDRUjP//2u3CI/T1vJhvM3uVBAANGx5xwLgiwSZ3TI6uMYANSyuc7AUs03CUvgHRMTEflcZ76FezDGJTE/wTYNI9whhDePhNxAcDVveQWDJbgK6Y8FPQDBH2WdgPlZmYNQvj5D7tP8Ap4+2s8lQX56g4AK34bGPshJ8gbl/wrXoASOUDanlgvVFB3g2T5sGZ2on9xCp23BJ8tusPVzw7O/zhuxtHSIZDYGRo891WUemjeVZgsu4kmY8ju8Ifb2f/i3WV+/gzq0Zgs0xba0eHCSsj4zLR91f1fAfiWsqzlEAAAAASUVORK5CYII="></image>
+    </view>
+    <view class="search-icon">
+      <icon class="icon-box-img" type="search" size="20"></icon>
+    </view>
+    <text>商务休闲鞋</text>
+  </view>
+  <view class="login">登录</view>
+</view>
+<view class="banner-bg"></view>
+
+<swiper indicator-dots="{{true}}" indicator-active-color="rgba(255,255,255,.8)"
+  indicator-color="rgba(255, 255, 255, .3)" autoplay="{{true}}">
+  <swiper-item class="swiper-item" wx:for="{{banners}}" wx:key="item">
+    <image mode="widthFix" src="{{item}}"></image>
+  </swiper-item>
+</swiper>
+
+<view>xxxxxxxxxxxxx</view>
+<button>123</button>
