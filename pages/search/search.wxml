@@ -1,0 +1,30 @@
+<!--pages/search/search.wxml-->
+<view class="search-header">
+  <view class="search-input">
+    <input confirm-type="search" value="{{inputTxt}}" bindinput="onSuggest" auto-focus placeholder="{{placeholder}}" />
+
+  </view>
+
+  <button class="search-button">搜索</button>
+</view>
+<!-- 热门搜索 -->
+<view wx:if="{{suggest.length==0}}" class="hotSearch">
+  <text class="hotSearch-head">热门搜索</text>
+  <view class="hotSearch-tag-list">
+    <view class="hotSearch-tag suggest-tag"  wx:for="{{hotSearchTags}}" wx:key="index" bindtap="onTap" data-keyword="{{item}}">
+      {{item}}
+    </view>
+  </view>
+</view>
+<!-- 搜索建议 -->
+<view class="suggest">
+  <!-- 搜索建议 item -->
+  <view class="suggest-item" wx:for="{{suggest}}" wx:key="index">
+    <!-- 关键字 -->
+    <text class="suggest-key"> {{item.key}}</text>
+    <!-- 标签 -->
+    <view class="suggest-tags">
+      <text class="suggest-tag"   wx:for="{{item.tag}}" wx:key="tsh" bindtap="onTap" data-keyword="{{item.tse}}"> {{item.tsh}}</text>
+    </view>
+  </view>
+</view>

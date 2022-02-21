@@ -1,0 +1,61 @@
+/* pages/category/category.wxss */
+.root {
+  display: flex;
+}
+
+.left {
+  /* position: fixed; */
+	/* top: 0px; */
+  padding-top: 20rpx;
+  width: 200rpx;
+  height: 100vh;
+  overflow:scroll;
+  align-content: center;
+  background-color: #f8f8f8;
+}
+
+.keywordArea.selectArea {
+  background-color: #fff;
+  color: red;
+}
+
+.keywordArea {
+  font-size: 30rpx;
+  background-color: #f8f8f8;
+  text-align: center; 
+  padding:15rpx;
+  padding-bottom: 25rpx;
+}
+
+.keywordArea>text {
+  margin: 25rpx;
+}
+
+.right {
+  /* position: relative; */
+  /* left:200rpx; */
+  width: 550rpx;
+  height: 100vh;
+  /* overflow:scroll; */
+  padding: 15rpx;
+}
+
+.l1{
+  padding: 20rpx 10rpx;
+}
+
+.l2-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.l2 {
+  width: 25%;
+  text-align: center;
+  font-size: small;
+  padding: 15rpx
+}
+
+.l2 image {
+  width: 100%;
+}

@@ -1,29 +1,68 @@
 <!--pages/home/home.wxml-->
-<!-- <text>pages/home/home.wxml</text> -->
 
-<view class="nav" >
+
+<!-- 顶部导航栏 -->
+<view class="nav">
   <view class="home-icon">
-    <image mode="widthFix" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgAgMAAAAdw9KTAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURUdwTP///////////waf0AoAAAADdFJOUwDjSYAlncUAAAAbSURBVBjTY5j/Hwq+MdTDmH+RmUgK6AuGhcsAU5tyB6Ji+x0AAAAASUVORK5CYII="></image>
+    <image mode="widthFix"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgAgMAAAAdw9KTAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURUdwTP///////////waf0AoAAAADdFJOUwDjSYAlncUAAAAbSURBVBjTY5j/Hwq+MdTDmH+RmUgK6AuGhcsAU5tyB6Ji+x0AAAAASUVORK5CYII=">
+    </image>
   </view>
-  <view class="search">
+  <view class="search" bindtap="navTo">
+
     <view class="jd-icon">
-       <image mode="widthFix" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAeCAMAAABpA6zvAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURUdwTOo8Puo7Peo7Pek7Peo7Pe0/Qek7PvE+SP9SUuo7Peo7Peo7Pus8P+o7Peo7Pek7PZSxd20AAAAQdFJOUwBV8eG+hyGkEQbGmWs/rthNA0r+AAAA5klEQVQ4y63T0RaDIAgAUEDRUjP//2u3CI/T1vJhvM3uVBAANGx5xwLgiwSZ3TI6uMYANSyuc7AUs03CUvgHRMTEflcZ76FezDGJTE/wTYNI9whhDePhNxAcDVveQWDJbgK6Y8FPQDBH2WdgPlZmYNQvj5D7tP8Ap4+2s8lQX56g4AK34bGPshJ8gbl/wrXoASOUDanlgvVFB3g2T5sGZ2on9xCp23BJ8tusPVzw7O/zhuxtHSIZDYGRo891WUemjeVZgsu4kmY8ju8Ifb2f/i3WV+/gzq0Zgs0xba0eHCSsj4zLR91f1fAfiWsqzlEAAAAASUVORK5CYII="></image>
+      <image mode="widthFix"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAeCAMAAABpA6zvAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURUdwTOo8Puo7Peo7Pek7Peo7Pe0/Qek7PvE+SP9SUuo7Peo7Peo7Pus8P+o7Peo7Pek7PZSxd20AAAAQdFJOUwBV8eG+hyGkEQbGmWs/rthNA0r+AAAA5klEQVQ4y63T0RaDIAgAUEDRUjP//2u3CI/T1vJhvM3uVBAANGx5xwLgiwSZ3TI6uMYANSyuc7AUs03CUvgHRMTEflcZ76FezDGJTE/wTYNI9whhDePhNxAcDVveQWDJbgK6Y8FPQDBH2WdgPlZmYNQvj5D7tP8Ap4+2s8lQX56g4AK34bGPshJ8gbl/wrXoASOUDanlgvVFB3g2T5sGZ2on9xCp23BJ8tusPVzw7O/zhuxtHSIZDYGRo891WUemjeVZgsu4kmY8ju8Ifb2f/i3WV+/gzq0Zgs0xba0eHCSsj4zLR91f1fAfiWsqzlEAAAAASUVORK5CYII=">
+      </image>
     </view>
     <view class="search-icon">
       <icon class="icon-box-img" type="search" size="20"></icon>
     </view>
-    <text>商务休闲鞋</text>
+    <text>{{searchword}}</text>
   </view>
   <view class="login">登录</view>
 </view>
+
+<!-- 顶部半圆背景 -->
 <view class="banner-bg"></view>
 
-<swiper indicator-dots="{{true}}" indicator-active-color="rgba(255,255,255,.8)"
+<!-- 头部轮播图 -->
+<swiper class="header-swiper" indicator-dots="{{true}}" indicator-active-color="rgba(255,255,255,.8)"
   indicator-color="rgba(255, 255, 255, .3)" autoplay="{{true}}">
   <swiper-item class="swiper-item" wx:for="{{banners}}" wx:key="item">
     <image mode="widthFix" src="{{item}}"></image>
   </swiper-item>
 </swiper>
 
-<view>xxxxxxxxxxxxx</view>
-<button>123</button>
+<!-- 滑动容器 -->
+<swiper class="box-swiper" indicator-dots="{{1}}">
+  <swiper-item wx:for="{{computedBoxs}}" wx:key="index">
+    <view class="box-list">
+      <view class="box" wx:for="{{item}}" wx:key="url"> 
+        <image mode="widthFix" src="{{item.url}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
+<!-- 猜你喜欢 -->
+<view class="love-floor products_list">
+  <ul>
+    <li class="product_warpper" wx:for="{{skus}}" wx:key='text'>
+      <view class="product">
+        <image class="product-img" mode="widthFix" src="{{item.imgURL}}"></image>
+        <view class="product-title">
+          <image class="product-title-icon" wx:if="{{item.iconURL}}" mode="heightFix" class="product-title-icon"
+            src="{{item.iconURL}}"></image>
+          <text class="product-title-text">{{item.text}}</text>
+        </view>
+        <view class="product-info">
+          <text class="product-info-price">¥{{item.price}}</text>
+          <text wx:if="{{item.priceTag}}" class="price-info-tag">{{item.priceTag}}</text>
+          <text class="product-info-similar">看相似</text>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>

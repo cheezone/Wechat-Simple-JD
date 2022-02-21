@@ -1,0 +1,92 @@
+/* pages/search/search.wxss */
+.search-header {
+  display: flex;
+  line-height: 80rpx;
+  padding: 20rpx 30rpx;
+  margin-bottom: 10rpx;
+  align-items: center;
+}
+
+.search-input {
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 50rpx;
+  flex: 18;
+  display: flex;
+  margin-right: 20rpx;
+  height: 60rpx;
+  font-size: small;
+  padding: 5rpx 5rpx;
+}
+
+.search-input>input {
+  width: 100%;
+  margin: 10rpx;
+}
+
+.search-button {
+  flex: 2;
+  float: right;
+  padding: 6rpx;
+  box-sizing: border-box;
+  background-color: #e93b3d;
+  color: #fff;
+  border-radius: 21rpx;
+  font-size: 30rpx;
+  line-height: 44rpx;
+}
+
+/* 搜索建议 */
+.suggest-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 2em;
+  margin: 12rpx 26rpx;
+
+}
+
+.suggest-tags::after {
+  content: "";
+  height: 1px;
+  width: 200%;
+  position: absolute;
+  left: 0;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  background-color: #f0f2f5;
+  border: 0 solid transparent;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  transform: scale(.5);
+  -webkit-transform: scale(.5);
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
+}
+
+.suggest-tags {
+  float: right;
+}
+
+.hotSearch {
+  padding: 30rpx
+}
+
+
+.suggest-tag { 
+  background-color: #f0f2f5;
+  font-size: 12px;
+  padding: 12rpx 12rpx;
+  margin: 0 5px;
+  color: #686868;
+  border-radius: 21rpx;
+}
+
+.hotSearch-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0;
+}
+
+.hotSearch-tag {margin: 10rpx;}

@@ -4,13 +4,31 @@
     "pages/test/test",
     "pages/index/index",
     "pages/admin/admin",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/category/category"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f00",
     "navigationBarTitleText": "京东商城",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "assets/home_1.png",
+        "selectedIconPath": "assets/home_1-active.png"
+      },
+      {
+        "text": "分类",
+        "pagePath": "pages/category/category",
+        "iconPath": "assets/category_1.png",
+        "selectedIconPath": "assets/category_1-active.png"
+      } 
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
