@@ -24,7 +24,7 @@ Page({
       url: hotSearchURL,
       success: res => {
         console.log("热门搜索=>", res.data);
-        let jsonp = res.data.match(/jsonpCBK.\((.+)\)/s)[1].replace(/\,\,/g, ',')
+        let jsonp = res.data.match(/jsonpCBK.\((.+)\)/s)[1].replace(/\,+/g, ',')
         console.log("jsonp=>", jsonp);
         let data = JSON.parse(jsonp)
         let hotSearchTags = data.owner
@@ -87,14 +87,16 @@ Page({
   },
   onTap: function (e) {
     let inputTxt = e.currentTarget.dataset['keyword'];
-    this.setData({
-      inputTxt
-    })
-    this.onSuggest({
-      detail: {
-        value: inputTxt
-      }
-    })
+    if (this.data.inputTxt != inputTxt) {
+      this.setData({
+        inputTxt
+      })
+      this.onSuggest({
+        detail: {
+          value: inputTxt
+        }
+      })
+    }
   },
   onSuggest: function (e) {
     var kw = e.detail.value;

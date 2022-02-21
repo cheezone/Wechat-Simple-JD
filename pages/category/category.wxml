@@ -1,7 +1,7 @@
 <!--pages/category/category.wxml-->
 <view class="root">
   <view class="left">
-    <view class="keywordArea" wx:for="{{m1}}" data-index="{{index}}" bindtap="changeArea"
+    <view class="keywordArea" wx:for="{{m1}}" data-index="{{index}}" bindtap="changeArea" wx:key="areaName"
       class="{{currentArea == index && 'selectArea keywordArea'||'keywordArea'}}">
       <text>{{item.areaName}}</text>
     </view>
@@ -11,7 +11,7 @@
     <view class="l1" wx:for="{{m1[currentArea].level1words}}" wx:key="keyword">
       <h4>{{item.keyword}}</h4>
       <view class="l2-list">
-        <view class="l2" wx:for="{{item.level2words}}">
+        <view class="l2" wx:for="{{item.level2words}}" wx:key="keyword">
           <image mode="widthFix" src="{{item.imageUrl}}"></image>
           <text>{{item.keyword}}</text>
         </view>

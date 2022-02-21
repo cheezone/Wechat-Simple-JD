@@ -27,7 +27,7 @@ Page({
   onLoad: function (options) {
 
     this.setData({
-      "m1": require('./m1')
+      "m1": require('./m1').data
     });
   },
 
